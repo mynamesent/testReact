@@ -1,6 +1,6 @@
 import React, { Component }from 'react';
 import axios from 'axios';
-import Login from './Component/login';
+import Login from './container/login';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
 

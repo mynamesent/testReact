@@ -1,9 +1,12 @@
 import React, { Component } from "react";
-import LoginForm from '../../component/styles/index.scss';
+import Style from './web/styles/index.scss';
 import axios from '../../../lib/axios';
 import { Form } from "formsy-semantic-ui-react";
 import {Grid, Segment, Portal } from 'semantic-ui-react';
 import Cookies from 'js-cookie';
+import LoginForm from "../../component/loginForm";
+import server from "../../server/index.js";
+
 
 class Login extends Component {
   constructor(props) {
@@ -15,9 +18,9 @@ class Login extends Component {
   }
 
 
-//   handleOnChange = (field, e) => {
-//     this.setState({ [field]: e });
-//   };
+  handleOnChange = (field, e) => {
+    this.setState({ [field]: e });
+  };
 
   handleSubmit = async ()=>{
    const resp =  await axios.post('/api/login',{
@@ -55,7 +58,7 @@ class Login extends Component {
       </center>
         <Form onSubmit={this.handleSubmit}>
           <LoginForm 
-        //   handleOnChange = {this.handleOnChange}
+         handleOnChange = {this.handleOnChange}
           />
         </Form>
         </div>
