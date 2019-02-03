@@ -37,10 +37,7 @@ class Login extends Component {
 
 
   render() {
-    const { open,redirect } = this.state
-    if(redirect && Cookies.get('user') !== undefined){
-      window.location.replace("/main");
-    }
+    
     return (
       <div>
         <Grid columns={2}>
